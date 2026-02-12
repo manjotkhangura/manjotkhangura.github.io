@@ -136,30 +136,90 @@ section h2 {
   color: var(--text-light);
 }
 
-/* Experience */
-.experience-item {
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--highlight), var(--accent));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -27px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: var(--highlight);
+  border: 3px solid var(--bg);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--highlight);
+  z-index: 1;
+}
+
+.timeline-content {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 16px;
+  padding: 16px 20px;
+  transition: box-shadow 0.2s ease;
 }
 
-.experience-item .role {
+.timeline-content:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.timeline-year {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--highlight);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.timeline-company {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--primary);
 }
 
-.experience-item .company-date {
-  font-size: 0.9rem;
+.timeline-company .timeline-location {
+  font-weight: 400;
+  font-size: 0.85rem;
   color: var(--text-light);
-  margin-bottom: 8px;
 }
 
-.experience-item p {
-  font-size: 0.95rem;
-  color: var(--text);
+.timeline-role {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.timeline-quip {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  font-style: italic;
+  line-height: 1.5;
 }
 
 /* Projects */
@@ -275,4 +335,7 @@ footer {
   .header h1 { font-size: 1.8rem; }
   .header .tagline { font-size: 1rem; }
   .skills-grid { grid-template-columns: 1fr; }
+  nav a { margin: 0 8px; font-size: 0.85rem; }
+  .timeline { padding-left: 24px; }
+  .timeline-dot { left: -20px; width: 12px; height: 12px; }
 }
