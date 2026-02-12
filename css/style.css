@@ -1,0 +1,278 @@
+:root {
+  --primary: #1a1a2e;
+  --accent: #0f3460;
+  --highlight: #e94560;
+  --bg: #fafafa;
+  --card-bg: #ffffff;
+  --text: #333333;
+  --text-light: #666666;
+  --border: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--highlight);
+}
+
+/* Header */
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.header .tagline {
+  font-size: 1.15rem;
+  color: #b0b0c8;
+  margin-bottom: 16px;
+}
+
+.header .contact-links {
+  font-size: 0.95rem;
+  color: #9090a8;
+}
+
+.header .contact-links a {
+  color: #c0c0d8;
+  margin: 0 10px;
+}
+
+.header .contact-links a:hover {
+  color: var(--highlight);
+}
+
+/* Navigation */
+nav {
+  background: var(--accent);
+  padding: 12px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  margin: 0 18px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: var(--highlight);
+}
+
+/* Main content */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin: 40px 0;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  border-bottom: 2px solid var(--highlight);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+/* About */
+.about p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.skill-card h3 {
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* Experience */
+.experience-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.experience-item .role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.experience-item .company-date {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.experience-item p {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+/* Projects */
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--highlight);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.project-card .status {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.project-card .status.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.project-card .status.upcoming {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.project-card .tech-tags span {
+  display: inline-block;
+  background: #e8eaf6;
+  color: var(--accent);
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin: 2px 4px 2px 0;
+}
+
+.project-card .links a {
+  font-size: 0.9rem;
+  margin-right: 16px;
+}
+
+/* Blog */
+.blog-list {
+  list-style: none;
+}
+
+.blog-list li {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+}
+
+.blog-list li a {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.blog-list li .date {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.blog-list li .preview {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+/* Education & Certs */
+.edu-item {
+  margin-bottom: 12px;
+}
+
+.edu-item strong {
+  color: var(--primary);
+}
+
+.edu-item span {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: #9090a8;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .header h1 { font-size: 1.8rem; }
+  .header .tagline { font-size: 1rem; }
+  .skills-grid { grid-template-columns: 1fr; }
+}
